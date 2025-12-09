@@ -44,31 +44,21 @@ const Hero: React.FC = () => {
           Entre agora no nosso canal privado e tenha acesso imediato.
         </p>
 
-        {/* 2. Botões Reais dentro de Links (Estrutura solicitada para Track4You) */}
+        {/* 2. Botões como Submit de Formulário (Solução Definitiva para Tracking) */}
         <div className="flex items-center gap-3 pt-4 pointer-events-auto">
-          <a 
-            href={link} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="no-underline"
-          >
-            <button className="bg-white text-black hover:bg-white/90 transition flex items-center gap-2 px-6 md:px-8 py-2 md:py-3 rounded font-bold text-sm md:text-lg hover:scale-105 transform duration-200 shadow-lg cursor-pointer border-none">
+          <form action={link} target="_blank">
+            <button type="submit" className="bg-white text-black hover:bg-white/90 transition flex items-center gap-2 px-6 md:px-8 py-2 md:py-3 rounded font-bold text-sm md:text-lg hover:scale-105 transform duration-200 shadow-lg cursor-pointer border-none">
               <Play className="w-5 h-5 md:w-6 md:h-6 fill-black" />
               <span>Assistir Agora</span>
             </button>
-          </a>
+          </form>
           
-          <a 
-            href={link} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="no-underline"
-          >
-            <button className="bg-gray-500/70 text-white hover:bg-gray-500/50 transition flex items-center gap-2 px-6 md:px-8 py-2 md:py-3 rounded font-bold text-sm md:text-lg backdrop-blur-sm hover:scale-105 transform duration-200 cursor-pointer border-none">
+          <form action={link} target="_blank">
+            <button type="submit" className="bg-gray-500/70 text-white hover:bg-gray-500/50 transition flex items-center gap-2 px-6 md:px-8 py-2 md:py-3 rounded font-bold text-sm md:text-lg backdrop-blur-sm hover:scale-105 transform duration-200 cursor-pointer border-none">
               <Info className="w-5 h-5 md:w-6 md:h-6" />
               <span>Mais Informações</span>
             </button>
-          </a>
+          </form>
         </div>
       </div>
     </div>
