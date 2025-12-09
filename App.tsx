@@ -42,25 +42,6 @@ const App: React.FC = () => {
       setIsTikTok(true);
       return; 
     }
-
-    // 1. Bloqueio de Inspeção (Mantido)
-    const handleContextMenu = (e: MouseEvent) => {
-      e.preventDefault();
-    };
-
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'F12') e.preventDefault();
-      if (e.ctrlKey && e.shiftKey && ['I', 'J', 'C', 'i', 'j', 'c'].includes(e.key)) e.preventDefault();
-      if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) e.preventDefault();
-    };
-
-    document.addEventListener('contextmenu', handleContextMenu);
-    document.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      document.removeEventListener('contextmenu', handleContextMenu);
-      document.removeEventListener('keydown', handleKeyDown);
-    };
   }, []);
 
   // TELA DE TUTORIAL PARA TIKTOK
